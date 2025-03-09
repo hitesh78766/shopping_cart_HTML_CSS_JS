@@ -1,0 +1,66 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Product details container */
+#product-details {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Product image */
+.product-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Product title */
+h2 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #333;
+}
+
+/* Product description */
+p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Price styling */
+strong {
+    font-size: 20px;
+    color: #e40046;
+}
+
+/* Button styling */
+button {
+    background-color: #ff9f00;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #fb641b;
+}
