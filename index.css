@@ -193,8 +193,20 @@ body {
     cursor: pointer;
     font-size: 12px;
     margin-top: 10px;
+    font-weight: 600;
   }
   
+
+  .openProduct{
+    background: green;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
 
 
 /* Quantity Buttons */

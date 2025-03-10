@@ -25,13 +25,13 @@ async function fetchProducts() {
 function displayProduct(products) {
   productContainer.innerHTML = "";
 
-  products.forEach((item) => {
+  products.map((item) => {
     const productCard = document.createElement("div");
     productCard.classList.add("card");
     productCard.innerHTML = `
       <img src="${item.image}" class="product-image" alt="${item.title}">
       <h3>${item.title}</h3>
-      <p>$${item.price.toFixed(2)}</p>
+      <p>₹${item.price}</p>
       <button class="add-to-cart-btn" 
         onclick="addToCart(${item.id}, '${item.title}', ${item.price}, '${item.image}')">
         Add to Cart
@@ -84,7 +84,7 @@ function showOffCanvasProducts() {
           <p class="cart-title">${item.title}</p>
         </div>
         <div class="cart-details">
-          <p class="cart-price">Total: $${totalPrice}</p>
+          <p class="cart-price">Total:  ₹${totalPrice}</p>
           <div class="quantity-control">
             <button class="qty-btn" onclick="decreaseQuantity(${index})" ${item.quantity === 1 ? "disabled" : ""}>-</button>
             <span class="quantity">Quantity: ${item.quantity}</span>
@@ -103,7 +103,7 @@ function showOffCanvasProducts() {
   const totalPriceElement = document.createElement("p");
   totalPriceElement.style.fontWeight = "bold";
   totalPriceElement.style.color = "red";
-  totalPriceElement.innerText = `The total price of all products is: $${totalCartPrice}`;
+  totalPriceElement.innerText = `Total is:  ₹${totalCartPrice}`;
 
   cartContainer.appendChild(totalPriceElement);
 }
