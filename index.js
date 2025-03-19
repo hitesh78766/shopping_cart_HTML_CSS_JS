@@ -4,7 +4,9 @@ const cardButton = document.getElementById("cart");
 const offcanvas = document.getElementById("offcanvasRight");
 const closeCart = document.getElementById("closeCart");
 const cartContainer = document.getElementById("addToCartData");
-
+// responsive navbar code and the main-section code
+const responsiveNabar = document.querySelector(".navbar-container");
+const mainContent= document.querySelector(".main-content")
 
 
 let cart = [];
@@ -62,6 +64,7 @@ function addToCart(id, title, price, image) {
 function showOffCanvasProducts() {
   let cart = JSON.parse(localStorage.getItem("cart")) || []; 
   cartContainer.innerHTML = "";
+  na
 
   if (cart.length === 0) {
     cartContainer.innerHTML = "<p style='text-align:center; font-weight:bold;'>Cart is empty</p>";
@@ -137,11 +140,15 @@ function removeFromCart(index) {
 // Open the cart
 cardButton.addEventListener("click", () => {
   offcanvas.classList.add("open");
+  responsiveNabar.classList.add("navbar-responsive-code")//  cart button click then navbar width will be change 
+  mainContent.classList.add("main-content-responsive-code")//  cart button click then main-content width will be change 
 });
 
 // Close the cart
 closeCart.addEventListener("click", () => {
   offcanvas.classList.remove("open");
+  responsiveNabar.classList.remove("navbar-responsive-code") 
+  mainContent.classList.remove("main-content-responsive-code")
 });
 
 // this is for open the product in the new page 
